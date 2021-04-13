@@ -116,8 +116,8 @@ public class DeDuplicatingTokenFilter extends FilteringTokenFilter {
 
             pos = 0;
             boolean isWrapped = false;
-            State priorStatesBuffer[] = new State[windowSize];
-            short priorMaxNumSightings[] = new short[windowSize];
+            State[] priorStatesBuffer = new State[windowSize];
+            short[] priorMaxNumSightings = new short[windowSize];
             int cursor = 0;
             while (input.incrementToken()) {
                 BytesRef bytesRef = termBytesAtt.getBytesRef();
