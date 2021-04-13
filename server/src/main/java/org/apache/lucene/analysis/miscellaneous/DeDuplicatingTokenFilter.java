@@ -148,12 +148,10 @@ public class DeDuplicatingTokenFilter extends FilteringTokenFilter {
                 }
                 // clean out the end of the tail that we may overwrite if the
                 // next iteration adds a new head
-                if (isWrapped) {
+                if (isWrapped && priorStatesBuffer[cursor] != null) {
                     // tokenPos is now positioned on tail - emit any valid
                     // tokens we may about to overwrite in the next iteration
-                    if (priorStatesBuffer[cursor] != null) {
                         recordLengthInfoState(priorMaxNumSightings, priorStatesBuffer, cursor);
-                    }
                 }
             } // end loop reading all tokens from stream
 
