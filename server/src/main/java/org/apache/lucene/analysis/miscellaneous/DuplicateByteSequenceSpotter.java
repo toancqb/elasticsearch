@@ -112,7 +112,7 @@ public class DuplicateByteSequenceSpotter {
             nextFreePos = 0;
             sequenceBufferFilled = true;
         }
-        if (sequenceBufferFilled == false) {
+        if (!sequenceBufferFilled) {
             return 0;
         }
         TreeNode node = root;
