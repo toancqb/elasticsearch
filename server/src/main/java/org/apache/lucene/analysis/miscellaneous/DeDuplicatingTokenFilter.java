@@ -103,7 +103,7 @@ public class DeDuplicatingTokenFilter extends FilteringTokenFilter {
             // rather than buffering all. However this array is perhaps not the
             // bulk of memory usage (in practice the dupSequenceSpotter requires
             // ~5x the original content size in its internal tree ).
-            allTokens = new ArrayList<State>(256);
+            allTokens = new ArrayList<>(256);
 
             /*
              * Given the bytes 123456123456 and a duplicate sequence size of 6
