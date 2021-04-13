@@ -22,7 +22,7 @@ public class OneMergeHelper {
     /**
      * The current MB per second rate limit for this merge.
      **/
-    public static double getMbPerSec(Thread thread, MergePolicy.OneMerge merge) {
+    public static double getMbPerSec(Thread thread) {
         if (thread instanceof ConcurrentMergeScheduler.MergeThread) {
             return ((ConcurrentMergeScheduler.MergeThread) thread).rateLimiter.getMBPerSec();
         }
